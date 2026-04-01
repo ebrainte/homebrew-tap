@@ -2,7 +2,7 @@ class AiUsage < Formula
   desc "Track AI subscription usage across Claude, ChatGPT, and GitHub Copilot"
   homepage "https://github.com/ebrainte/ai-usage"
   url "https://github.com/ebrainte/ai-usage/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "PLACEHOLDER"
+  sha256 "681382915efa0bd5f4890f3a0685339ceff7e027c39f57af5368711a26dc75f0"
   license "MIT"
 
   depends_on "python@3.12"
