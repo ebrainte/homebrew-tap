@@ -13,6 +13,13 @@ class AiUsage < Formula
     python3 = "python3.12"
     venv = virtualenv_create(libexec, python3)
     system python3, "-m", "pip", "install", "--prefix=#{libexec}", "."
+
+    # Fix shebang to use the venv python so imports work
+    Dir.glob(libexec/"bin/*").each do |f|
+      next unless File.file?(f) && File.read(f, 2) == "#!"
+      inreplace f, %r{^#!.*python.*$}, "#!#{libexec}/bin/python"
+    end
+
     bin.install_symlink libexec/"bin/ai-usage"
   end
 
