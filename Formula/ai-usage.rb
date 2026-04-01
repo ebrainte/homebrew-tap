@@ -10,8 +10,9 @@ class AiUsage < Formula
   depends_on "python@3.12"
 
   def install
-    virtualenv_create(libexec, "python3.12")
-    system libexec/"bin/pip", "install", ".", "--prefix=#{libexec}"
+    python3 = "python3.12"
+    venv = virtualenv_create(libexec, python3)
+    system python3, "-m", "pip", "install", "--prefix=#{libexec}", "."
     bin.install_symlink libexec/"bin/ai-usage"
   end
 
