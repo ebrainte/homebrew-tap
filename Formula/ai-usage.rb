@@ -1,13 +1,13 @@
 class AiUsage < Formula
   desc "Track AI subscription usage across Claude, ChatGPT, and GitHub Copilot"
   homepage "https://github.com/ebrainte/ai-usage"
-  version "0.2.1"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/ebrainte/ai-usage/releases/download/v0.2.1/ai-usage-darwin-arm64"
-      sha256 "5575e5bc6d825b6fa4db3ab01fab9b1e49cf6ca0cc4b385541bf05a8ba30516a"
+      url "https://github.com/ebrainte/ai-usage/releases/download/v0.3.0/ai-usage-darwin-arm64"
+      sha256 "39fe67cd513e63770b5f73a7022a2f14a778aabd122bb98ebf09c66076ece923"
     end
   end
 
